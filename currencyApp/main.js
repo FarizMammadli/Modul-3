@@ -83,3 +83,21 @@ inpRight.addEventListener('input', (e) =>{
 });
 
 
+inpLeft.addEventListener('keydown', acceptNumber);
+inpRight.addEventListener('keydown', acceptNumber);
+
+function acceptNumber(e) {
+    if( ! ( (e.key === 'Backspace') || (e.key === 'Delete') ||
+    ( ('0' <= e.key) && (e.key <= '9') ) ||
+    (e.key === '.') || (e.key === '.') 
+    ) ){
+        e.preventDefault();
+    }
+    if ((e.key === ',') || (e.key === '.')) {
+        if (e.target.value.indexOf('.') >= 0) {
+            e.preventDefault();
+        }
+    }
+}
+
+getData(currentCurr, exchangeCurr, inpLeft, inpRight);

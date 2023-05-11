@@ -93,6 +93,18 @@ p{
     color: white;
 }
 
+.l-panel:hover{
+    position: relative;
+    bottom: 5px;
+  
+}
+
+.r-panel:hover{
+    position: relative;
+    bottom: 5px;
+  
+}
+
 .l-curr , .r-curr{
     margin-left: 13px;
     margin-top: 30px;
